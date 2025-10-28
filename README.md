@@ -16,8 +16,6 @@
       display: flex;
       justify-content: center;
     }
-
-    /* মোবাইল ফ্রেমের মতো মাঝখানে সীমাবদ্ধ */
     .mobile-frame {
       width: 100%;
       max-width: 420px;
@@ -27,7 +25,6 @@
       display: flex;
       flex-direction: column;
     }
-
     header {
       background: #1e3a8a;
       text-align: center;
@@ -35,18 +32,25 @@
       font-weight: bold;
       font-size: 20px;
     }
-
     main {
       flex: 1;
       padding: 16px;
     }
-
     h1 {
       font-size: 22px;
       color: #22d3ee;
       text-align: center;
     }
-
+    .notice {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      color: #fff;
+      text-align: center;
+      font-size: 15px;
+    }
     .card {
       background: #0b1220;
       padding: 14px;
@@ -54,7 +58,6 @@
       border: 1px solid #1f2937;
       margin-top: 16px;
     }
-
     footer {
       text-align: center;
       padding: 12px;
@@ -62,12 +65,10 @@
       color: #94a3b8;
       border-top: 1px solid #1e293b;
     }
-
-    /* Chatbase বাটন যেন মোবাইলেও সঠিক জায়গায় থাকে */
-    iframe[src*="chatbase"] {
-      max-width: 380px !important;
-      right: 10px !important;
-      bottom: 10px !important;
+    .creator {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #22d3ee;
     }
   </style>
 
@@ -94,12 +95,18 @@
 <body>
   <div class="mobile-frame">
     <header>Health Friend BD</header>
+
     <main>
+      <!-- 🔹 উপরের নির্দেশনা -->
+      <div class="notice">💬 চ্যাট শুরু করতে নিচের কালো বাটনে ক্লিক করুন 👇</div>
+
       <h1>বাংলা স্বাস্থ্য সহকারী</h1>
+
       <div class="card">
         <p>ছোটখাটো অসুখে দ্রুত ও সাধারণ পরামর্শ পেতে নিচের চ্যাট বাটন চাপুন।</p>
         <p>❗ গুরুতর সমস্যায় অবশ্যই চিকিৎসকের পরামর্শ নিন।</p>
       </div>
+
       <div class="card">
         <h3>⚕️ উদাহরণ</h3>
         <ul>
@@ -109,7 +116,12 @@
         </ul>
       </div>
     </main>
-    <footer>© ২০২৫ — শাহারিয়ার হক শাফি</footer>
+
+    <footer>
+      <p>© ২০২৫ — Health Friend BD</p>
+      <div class="creator">🤖 এই AI তৈরি করেছেন — শাহারিয়ার হক শাফি</div>
+    </footer>
   </div>
 </body>
 </html>
+
